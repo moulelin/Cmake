@@ -4,9 +4,9 @@ project(demo1)
 #PROJECT_SOURCE_DIR/CMAKE_SOURCE_DIR/_SOURCE_DIR： 为包含PROJECT()命令的最近一个CMakeLists.txt文件所在的文件夹路径。
 #PROJECT_BINARY_DIR/CMAKE_BINARY_DIR/_BINARY_DIR： 运行cmake命令的目录，即工程编译发生的路径。
 
-configure_file(
-    "${PROJECT_SOURCE_DIR}/config.h.in"
-    "${PROJECT_BINARY_DIR}/config.h"
+configure_file(# 把CmakeLists的变量输出到output中
+    "${PROJECT_SOURCE_DIR}/config.h.in" # input
+    "${PROJECT_BINARY_DIR}/config.h" # output
 )
 option(USE_MYMATH "Use the provide library" ON)
 
