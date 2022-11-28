@@ -146,6 +146,21 @@
     #cmakedefine var3 "${var3}" #Note: The name between ${} should be the same as the variable name after cmakedefine
     ```
 
+     ```
+        # Define a macro to simplify testing
+        macro (do_test arg1 arg2 result)
+        add_test (test_${arg1}_${arg2} Demo ${arg1} ${arg2})
+        set_tests_properties(test_${arg1}_${arg2}
+            PROPERTIES PASS_REGULAR_EXPRESSION ${result})
+        endmacro (do_test)
+        
+        # Use this macro to perform a series of data tests
+        do_test(5 2 "is 25")
+        do_test(10 5 "is 100000")
+        do_test(2 10 "is 1024")
+        
+        ```
+
 ## 4. cmake gets the hash and version of git, comprehensive example
 
 [Github code](https://github.com/moulelin/Cmake/tree/master/demo_git_config)
