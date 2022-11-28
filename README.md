@@ -135,9 +135,9 @@
    
    - configure_file(input output options)
    - Copy a file (specified by the input parameter) to the specified location (specified by the output parameter), and modify its content according to options.
-   -  configure_file command is generally used for custom compilation options or custom macro scenarios. The configure_file command will automatically convert the cmakedefine keyword and its content in the input file according to the rules specified by options
+   - configure_file command is generally used for custom compilation options or custom macro scenarios. The configure_file command will automatically convert the cmakedefine keyword and its content in the input file according to the rules specified by options
 
-    demo
+  demo
     
     ```
     #cmakedefine var1
@@ -156,6 +156,7 @@ In this way, these values ​​can be obtained by providing the interface of th
 ### 4.1 utils.cmake file
 
     ```
+    
     # Used to get the hash and branch of git
     macro(get_git_hash_git_hash)
         find_package(GIT QUIET)
