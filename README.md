@@ -158,6 +158,7 @@ In this way, these values ​​can be obtained by providing the interface of th
 
 ### 4.1 utils.cmake file
 
+- utils.cmake 
     ```
 
     # Used to get the hash and branch of git
@@ -216,12 +217,14 @@ In this way, these values ​​can be obtained by providing the interface of th
 
     ```
 
-  - Use a macro definition to define two macro definitions
-  - Use execute_process to execute external commands
-  - OUTPUT_VARIABLE can get the output to the command line and assign it to the variable
+- Use a macro definition to define two macro definitions
+- Use execute_process to execute external commands
+- OUTPUT_VARIABLE can get the output to the command line and assign it to the variable
 
 ### 4.2 CMakeLists.txt
 
+- CMakeLists.txt
+  
     ```
     cmake_minimum_required (VERSION 2.9)
 
@@ -261,10 +264,11 @@ In this way, these values ​​can be obtained by providing the interface of th
 
     ```
 
-   - The macro definition is called
+- The macro definition is called
     
 ### 4.3 utils.h.in
 
+- **utils.h.in**
     ```
     #ifndef UTILS_H_IN
     #define UTILS_H_IN
@@ -284,7 +288,7 @@ In this way, these values ​​can be obtained by providing the interface of th
 
 ### 4.4 Execute cmake .
 
-  Generate utils.h as follows
+- Generate utils.h as follows
 
     ```
     #ifndef UTILS_H_IN
@@ -305,7 +309,7 @@ In this way, these values ​​can be obtained by providing the interface of th
 
 ### 4.5 Use make to link .o files to generate executable files
 
- The output is as follows
+- The output is as follows
 
     ```
     (base) moule@mouledeMacBook-Air demo_git_config % ./demo_git_config
