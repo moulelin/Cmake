@@ -132,34 +132,22 @@
         
         ```
 
-## 3. configure_file
+## 3. Configure_file
    
    - configure_file(input output options)
    - Copy a file (specified by the input parameter) to the specified location (specified by the output parameter), and modify its content according to options.
-   - configure_file command is generally used for custom compilation options or custom macro scenarios. The configure_file command will automatically convert the cmakedefine keyword and its content in the input file according to the rules specified by options
+   - configure_file command is generally used for custom compilation options or custom macro scenarios. 
+   - The configure_file command will automatically convert the cmakedefine keyword and its content in the input file according to the rules specified by options
 
-   demo
+   - demo
     
-    ```
-    #cmakedefine var1
-    #cmakedefine var2 "@var2@" #Note: The name between @@ should be the same as the variable name after cmakedefine
-    #cmakedefine var3 "${var3}" #Note: The name between ${} should be the same as the variable name after cmakedefine
-    ```
-
-     ```
-        # Define a macro to simplify testing
-        macro (do_test arg1 arg2 result)
-        add_test (test_${arg1}_${arg2} Demo ${arg1} ${arg2})
-        set_tests_properties(test_${arg1}_${arg2}
-            PROPERTIES PASS_REGULAR_EXPRESSION ${result})
-        endmacro (do_test)
-        
-        # Use this macro to perform a series of data tests
-        do_test(5 2 "is 25")
-        do_test(10 5 "is 100000")
-        do_test(2 10 "is 1024")
-        
         ```
+        #cmakedefine var1
+        #cmakedefine var2 "@var2@" #Note: The name between @@ should be the same as the variable name after cmakedefine
+        #cmakedefine var3 "${var3}" #Note: The name between ${} should be the same as the variable name after cmakedefine
+        ```
+
+    
 
 ## 4. cmake gets the hash and version of git, comprehensive example
 
