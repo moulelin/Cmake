@@ -138,13 +138,13 @@
    - Copy a file (specified by the input parameter) to the specified location (specified by the output parameter), and modify its content according to options.
    - configure_file command is generally used for custom compilation options or custom macro scenarios. The configure_file command will automatically convert the cmakedefine keyword and its content in the input file according to the rules specified by options
 
-    demo
+   demo
     
         ```
+
         #cmakedefine var1
         #cmakedefine var2 "@var2@" #Note: The name between @@ should be the same as the variable name after cmakedefine
         #cmakedefine var3 "${var3}" #Note: The name between ${} should be the same as the variable name after cmakedefine
-    
         ```
 
 ## 4. cmake gets the hash and version of git, comprehensive example
