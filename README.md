@@ -141,10 +141,7 @@
    demo
     
         ```
-
-        #cmakedefine var1
-        #cmakedefine var2 "@var2@" #Note: The name between @@ should be the same as the variable name after cmakedefine
-        #cmakedefine var3 "${var3}" #Note: The name between ${} should be the same as the variable name after cmakedefine
+        qwq
         ```
 
 ## 4. cmake gets the hash and version of git, comprehensive example
